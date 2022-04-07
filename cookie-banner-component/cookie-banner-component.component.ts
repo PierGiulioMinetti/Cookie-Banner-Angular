@@ -9,7 +9,7 @@ import { CookieBannerService } from '../services/cookie-banner.service';
 export class CookieBannerComponentComponent implements OnInit {
 
   constructor(private bannerService: CookieBannerService) { }
-
+  //properties
   btn!: HTMLButtonElement;
   banner!: HTMLDivElement;
 
@@ -18,19 +18,17 @@ export class CookieBannerComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //trigger banner with a setTimeout
+  //METHOD
+  //trigger banner with a setTimeout (timeOut start after 2 seconds, and if the cookieAccepted variable isn't set is going to show the banner)
   trigger() {
     this.bannerService.triggerBanner(this.banner)
   }
 
   // function to disable banner
   cookieButtonClicked() {
-
     this.bannerService.disableBanner(this.banner);
   }
-  // disableBanner() {
-  //   alert('funge!')
-  // }
+
 
   ngAfterViewInit() {
     this.btn = document.querySelector('.cookie-btn') as HTMLButtonElement;

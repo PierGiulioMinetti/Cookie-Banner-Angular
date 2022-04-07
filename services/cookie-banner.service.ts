@@ -7,10 +7,6 @@ export class CookieBannerService {
 
   constructor() { }
 
-
-
-
-
   // ________________CODE FROM HERE_________________________
 
   disableBanner(cookieBanner: HTMLDivElement) {
